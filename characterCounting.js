@@ -1,9 +1,8 @@
 function countLetters(string) {
     var outObject = {}
-    var uniqueChar = '';
     
     for (var char in string) {
-        if (uniqueChar.indexOf(char) === -1 && string[char] !== ' ') {
+        if (string[char] !== ' ') {
             outObject[string[char]] = 0;
         } 
     }
