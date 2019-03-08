@@ -1,17 +1,22 @@
-function characterIndex(string) {
-    var outObject = {}
-    for (var char in string) {
-      if (string[char] !== ' ') {
-        outObject[string[char]] = [];
-      }
-    }
-    for (var char in string) {
-      console.log(char);
-      if (string[char] !== ' '){
-      outObject[string[char]].push(char);
-      }
-    }
-    var instances = 0;
-    console.log(outObject);
+function countLetters(string) {
+  var outObject = {}
+  var uniqueChar = '';
+  
+  for (var char in string) {
+      if (uniqueChar.indexOf(char) === -1 && string[char] !== ' ') {
+          outObject[string[char]] = 0;
+      } 
   }
-  characterIndex('lighthouse in the house');
+
+  for (var char in string) {
+      if (string[char] !== ' '){
+      outObject[string[char]] += 1;
+      }
+  }
+  
+  var instances = 0;
+  
+  console.log(outObject);
+}
+
+countLetters('lighthouse in the house');
